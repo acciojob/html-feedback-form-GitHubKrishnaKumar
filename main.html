@@ -8,17 +8,32 @@
 
 <body>
 	<h1>Feedback Form</h1>
-	<form>
-		<label for="name" id="name">Name</label>
-		<input type="text" minlength="3" maxlength="50" /><br/>
-		<label for="portfolio" id="portfolio">Portfolio </label>
-		<input type="text" /><br/>
-		<label for="favColor" id="favColor">favColor </label>
-		<input type="color" /><br/>
-		<label for="likeness" id="likeness">likeness </label>
-		<input type="number" /><br/>
-		<input type="submit" value="Submit" />
-	</form>
+	 <form id="feedbackForm">
+        <!-- Name Input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" minlength="3" maxlength="50" required><br><br>
+
+        <!-- Portfolio Input -->
+        <label for="portfolio">Portfolio:</label>
+        <input type="url" id="portfolio" name="portfolio" required><br><br>
+
+        <!-- Favourite Color Input -->
+        <label for="favColor">Favourite Color:</label>
+        <select id="favColor" name="favColor" required>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <!-- Add more color options as needed -->
+        </select><br><br>
+
+        <!-- Likeness Slider Input -->
+        <label for="likeness">Likeness:</label>
+        <input type="range" id="likeness" name="likeness" min="1" max="100" required><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
